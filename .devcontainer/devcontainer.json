@@ -1,0 +1,16 @@
+{
+  "name": "Rust Development Container",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "1YiB.rust-bundle"
+      ]
+    }
+  }
+}
