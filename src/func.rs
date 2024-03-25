@@ -1,8 +1,7 @@
-fn greet(name: &str) -> String {
+pub fn greet(name: &str) -> String {
     format!("Hello, {}!", name)
 }
 
-fn main() {
-    let message: String = greet("Alice");
-    println!("{}", message)
+pub fn add(a: i32, b: i32) -> i32 {
+    a + b
 }
