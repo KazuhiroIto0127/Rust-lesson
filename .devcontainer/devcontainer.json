@@ -1,16 +1,19 @@
 {
-  "name": "Rust Development Container",
+  "name": "Rust Dev Container",
   "build": {
-    "dockerfile": "../Dockerfile"
+    "dockerfile": "../Dockerfile",
+    "args": {
+      "RUST_VERSION": "1.82.0"
+    }
   },
   "customizations": {
-    "vscode": {
-      "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-      },
-      "extensions": [
-        "1YiB.rust-bundle"
-      ]
+    "extensions": [
+      "rust-lang.rust-analyzer", // Rustのコード補完など
+      "serayuzgur.crates" // Crateのサポート
+    ],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
     }
-  }
+  },
+  "postCreateCommand": "rustup component add rustfmt clippy"
 }
